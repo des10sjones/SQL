@@ -1,7 +1,7 @@
 -- Trigger and Events
 
 SELECT *
-FROM employee_demographoics;
+FROM employee_demographics;
 
 SELECT *
 FROM employee_salary;
@@ -20,4 +20,23 @@ DELIMITER ;
 
 
 INSERT INTO employee_salary (employee_id, first_name, last_name,occupation, salary, dept_id)
-VALUES(13,'Jerry', 'Jetson', 'Data Analyst',10000000, NULL);
+VALUES(13,'Jimmy', 'Jetson', 'Data Analyst',10000000, NULL);
+
+-- EVENTS
+
+SELECT *
+FROM  employee_demographics
+
+
+DELIMITER $$
+CREATE EVENT delete_retired
+ON SCHEDULE EVERY 30 SECOND
+DO 
+BEGIN
+	DELETE
+    FROM employee_demographics
+    WHERE age >= 60;
+END $$
+DELIMITER ;
+
+
