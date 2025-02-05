@@ -77,3 +77,91 @@ WHERE row_num > 1;
 
 SELECT *
 FROM layoffs_staging2;
+
+-- Standerdizing data 
+
+
+-- Removess empty spaces
+SELECT company, TRIM(company)
+FROM layoffs_staging2;
+
+-- updates table
+UPDATE layoffs_staging2
+SET company = TRIM(company);
+
+
+-- check for uniformity (ex. Crypto and Crytpo Currency- typos)
+SELECT DISTINCT industry
+FROM layoffs_staging2
+ORDER BY 1;
+
+SELECT *
+FROM layoffs_staging2
+WHERE industry LIKE 'Crypto%';
+
+UPDATE layoffs_staging2
+SET industry = 'Crypto' 
+WHERE industry LIKE 'Crypto%'
+;
+
+SELECT DISTINCT country, TRIM(TRAILING '.' FROM country)
+FROM layoffs_staging2
+WHERE country LIKE 'United States%';
+
+UPDATE  layoffs_staging2
+SET country = TRIM(TRAILING '.' FROM country)
+WHERE country LIKE 'United States%';
+
+-- change date from text
+SELECT `date`
+FROM layoffs_staging2;
+
+UPDATE layoffs_staging2
+SET `date` = STR_TO_DATE(`date`, '%m/%d/%Y');
+
+-- ONLY SLATER STAGEING TABLES
+ALTER TABLE layoffs_staging2
+MODIFY COLUMN `date` DATE;
+
+
+-- Null and Blank Values
+SELECT *
+FROM layoffs_staging2
+WHERE total_laid_off IS NULL
+AND  percentage_laid_off IS NULL;
+
+SELECT *
+FROM layoffs_staging2
+WHERE industry IS NULL
+OR industry = '';
+
+SELECT DISTINCT industry
+FROM layoffs_staging2
+;
+
+SELECT *
+FROM layoffs_staging2
+WHERE company LIKE 'Bally%';
+
+-- set blanks to nulls 
+UPDATE layoffs_staging2
+SET industry = NULL
+WHERE industry = '';
+
+SELECT t1.industry,t2.industry
+FROM  layoffs_staging2 t1
+JOIN layoffs_staging2 t2
+	ON t1.company = t2.company
+    AND t1.location = t2.location
+WHERE (t1.industry IS NUll OR t1.industry = '')
+AND t2.industry IS NOT NULL;
+
+UPDATE layoffs_staging2 t1  
+JOIN layoffs_staging2 t2
+	ON t1.company = t2.company
+SET t1.industry = t2.industry
+WHERE t1.industry IS NUll 
+AND t2.industry IS NOT NULL;
+
+SELECT *
+FROM layoffs_staging2
