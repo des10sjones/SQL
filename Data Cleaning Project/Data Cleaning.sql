@@ -164,4 +164,14 @@ WHERE t1.industry IS NUll
 AND t2.industry IS NOT NULL;
 
 SELECT *
+FROM layoffs_staging2;
+
+-- Deletes  rows with null values for total_laid_off and percentage_laid_off
+DELETE 
 FROM layoffs_staging2
+WHERE total_laid_off IS NULL
+AND  percentage_laid_off IS NULL;
+
+ALTER TABLE layoffs_staging2
+DROP COLUMN row_num;
+
