@@ -1,0 +1,122 @@
+[
+    {
+        "CustomerID":1001,
+        "First_Name":"Frodo",
+        "Last_Name":"Baggins",
+        "Phone_Number":"123-545-5421",
+        "Address":"123 Shire Lane, Shire",
+        "Paying Customer":"Y",
+        "Do_Not_Contact":"N",
+        "Street_Address":"123 Shire Lane",
+        "State":" Shire",
+        "Zip_Code":""
+    },
+    {
+        "CustomerID":1005,
+        "First_Name":"Jon",
+        "Last_Name":"Snow",
+        "Phone_Number":"876-678-3469",
+        "Address":"123 Dragons Road",
+        "Paying Customer":"Y",
+        "Do_Not_Contact":"N",
+        "Street_Address":"123 Dragons Road",
+        "State":"",
+        "Zip_Code":""
+    },
+    {
+        "CustomerID":1008,
+        "First_Name":"Sherlock",
+        "Last_Name":"Holmes",
+        "Phone_Number":"876-678-3469",
+        "Address":"98 Clue Drive",
+        "Paying Customer":"N",
+        "Do_Not_Contact":"N",
+        "Street_Address":"98 Clue Drive",
+        "State":"",
+        "Zip_Code":""
+    },
+    {
+        "CustomerID":1010,
+        "First_Name":"Peter",
+        "Last_Name":"Parker",
+        "Phone_Number":"123-545-5421",
+        "Address":"25th Main Street, New York",
+        "Paying Customer":"Y",
+        "Do_Not_Contact":"N",
+        "Street_Address":"25th Main Street",
+        "State":" New York",
+        "Zip_Code":""
+    },
+    {
+        "CustomerID":1013,
+        "First_Name":"Don",
+        "Last_Name":"Draper",
+        "Phone_Number":"123-543-2345",
+        "Address":"2039 Main Street",
+        "Paying Customer":"Y",
+        "Do_Not_Contact":"N",
+        "Street_Address":"2039 Main Street",
+        "State":"",
+        "Zip_Code":""
+    },
+    {
+        "CustomerID":1014,
+        "First_Name":"Leslie",
+        "Last_Name":"Knope",
+        "Phone_Number":"876-678-3469",
+        "Address":"343 City Parkway",
+        "Paying Customer":"Y",
+        "Do_Not_Contact":"N",
+        "Street_Address":"343 City Parkway",
+        "State":"",
+        "Zip_Code":""
+    },
+    {
+        "CustomerID":1015,
+        "First_Name":"Toby",
+        "Last_Name":"Flenderson",
+        "Phone_Number":"304-762-2467",
+        "Address":"214 HR Avenue",
+        "Paying Customer":"N",
+        "Do_Not_Contact":"N",
+        "Street_Address":"214 HR Avenue",
+        "State":"",
+        "Zip_Code":""
+    },
+    {
+        "CustomerID":1016,
+        "First_Name":"Ron",
+        "Last_Name":"Weasley",
+        "Phone_Number":"123-545-5421",
+        "Address":"2395 Hogwarts Avenue",
+        "Paying Customer":"N",
+        "Do_Not_Contact":"N",
+        "Street_Address":"2395 Hogwarts Avenue",
+        "State":"",
+        "Zip_Code":""
+    },
+    {
+        "CustomerID":1017,
+        "First_Name":"Michael ",
+        "Last_Name":"Scott",
+        "Phone_Number":"123-643-9775",
+        "Address":"121 Paper Avenue, Pennsylvania",
+        "Paying Customer":"Y",
+        "Do_Not_Contact":"N",
+        "Street_Address":"121 Paper Avenue",
+        "State":" Pennsylvania",
+        "Zip_Code":""
+    },
+    {
+        "CustomerID":1020,
+        "First_Name":"Anakin",
+        "Last_Name":"Skywalker",
+        "Phone_Number":"876-678-3469",
+        "Address":"910 Tatooine Road, Tatooine",
+        "Paying Customer":"Y",
+        "Do_Not_Contact":"N",
+        "Street_Address":"910 Tatooine Road",
+        "State":" Tatooine",
+        "Zip_Code":""
+    }
+]
